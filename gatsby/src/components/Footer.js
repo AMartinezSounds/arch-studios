@@ -23,15 +23,11 @@ const FooterStyle = styled.div`
     height: 72px;
     background-color: black;
   }
-  @media (min-width: 769px) {
-    justify-content: flex-start;
-    display: grid;
-    grid-row-start: 1;
-    grid-row-end: 1;
-    grid-column-start: 2;
-    grid-column-end: 4;
+  @media (min-width: 768px) {
+    flex-direction: row;
     height: 120px;
-    width: 100%;
+    width: calc(100% - 120px);
+    justify-content: space-between;
   }
 `;
 
@@ -39,24 +35,27 @@ const FooterBarStyle = styled.nav`
   height: 139px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
+  text-align: center;
+  @media (min-width: 768px) {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 64.23%;
+    height: 120px;
+  }
 `;
 
-const FooterPortfolioButton = styled.div`
-  grid-row-start: 1;
-  grid-row-end: 1;
-  grid-column-start: 5;
-  grid-column-end: 7;
-`;
+const FooterPortfolioButton = styled.div``;
 
 function Footer() {
   return (
     <FooterStyle>
       <p style={{ color: '#eeeff4' }}>push footer down</p>
       <FooterBarStyle>
-        <li>
+        {/* <li>
           <Link to="/portfolio">Portfolio</Link>
-        </li>
+        </li> */}
         <li>
           <Link to="/about">About Us</Link>
         </li>

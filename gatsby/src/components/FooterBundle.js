@@ -16,6 +16,16 @@ const FooterBundleStyle = styled.footer`
     width: 70px;
     height: 70px;
   }
+  @media (min-width: 768px) {
+    display: flex;
+    height: 120px;
+  }
+  @media (min-width: 1340px) {
+    margin-inline: auto;
+    width: 80%;
+    display: flex;
+    height: 120px;
+  }
 `;
 
 const ImageContainer = styled.div`
@@ -30,6 +40,10 @@ const ImageContainer = styled.div`
   grid-column-start: 1;
   grid-column-end: 1;
   z-index: 2;
+  @media (min-width: 768px) {
+    height: 120px;
+    margin-left: 0;
+  }
 `;
 
 function FooterBundle() {

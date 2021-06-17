@@ -34,12 +34,12 @@ function MobileNav({ crossButton, setCrossButton }) {
     <MobileNavStyles show={crossButton}>
       <ul>
         <li>
-          <Link to="/about" onClick={() => setCrossButton('false')}>
+          <Link to="/portfolio" onClick={() => setCrossButton('false')}>
             Portfolio
           </Link>
         </li>
         <li>
-          <Link to="/locations" onClick={() => setCrossButton('false')}>
+          <Link to="/about" onClick={() => setCrossButton('false')}>
             About Us
           </Link>
         </li>

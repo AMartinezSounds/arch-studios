@@ -5,7 +5,8 @@ const GlobalStyles = createGlobalStyle`
 	  font-family: 'Spartan', sans-serif;
 	  color: black;
 	  font-size: 1rem;
-          font-weight: 200
+          font-weight: 200;
+	  overflow-x: hidden;
 	}
 	li {
 	  list-style: none;

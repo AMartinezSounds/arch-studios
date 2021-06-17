@@ -1,6 +1,8 @@
 import React from 'react';
+import styled from 'styled-components';
+import { graphql } from 'gatsby';
 
-function about() {
+function about({ data }) {
   return (
     <div>
       <p>about page</p>

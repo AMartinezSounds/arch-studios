@@ -24,7 +24,7 @@ const TitleStyle = styled.div`
     letter-spacing: 0.5rem;
     color: #c8ccd8;
   }
-  @media (max-width: 768px) {
+  @media (max-width: 767px) {
     display: none;
   }
 `;
@@ -36,7 +36,7 @@ const Line = styled.div`
 
 function portfolio({ data }) {
   const projects = data.projects.nodes;
-  // console.log(projects);
+  console.log(data);
   return (
     <>
       <TitleStyle>
