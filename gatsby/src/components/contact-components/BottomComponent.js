@@ -3,47 +3,63 @@ import styled from 'styled-components';
 import { HiArrowRight } from 'react-icons/hi';
 
 const BottomComponentStyle = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  margin-bottom: 4rem;
-  margin-inline: auto;
-  width: 311px;
   height: 493px;
+  width: 82.94%;
+  max-width: 572px;
+  margin-inline: auto;
   .title {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
+    font-size: 1.9rem;
     height: 96px;
+    width: 92%;
   }
-  h2 {
-    font-size: 2.55rem;
-    margin-top: 0;
-    margin-bottom: 0;
+  @media (min-width: 768px) {
+    height: 469px;
+  }
+  @media (min-width: 1440px) {
+    height: 500px;
+    max-width: 1110px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .title {
+      width: 350px;
+      height: 100%;
+      font-size: 2rem;
+    }
   }
 `;
 
 const FormStyle = styled.form`
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  height: 349px;
+  width: 100%;
   input,
   textarea {
     border: none;
-    outline: none;
-    resize: none;
-    padding: 1rem 2rem;
+    background: none;
+    padding: 1rem;
     border-bottom: 1px solid black;
-    font-size: 1.1rem;
+    outline: none;
+  }
+  textarea {
+    resize: none;
   }
   button {
     width: 80px;
     height: 80px;
-    align-self: flex-end;
-    border: none;
+    margin-right: 0;
+    margin-left: auto;
     color: white;
     background-color: black;
+    border: none;
+  }
+  @media (min-width: 1440px) {
+    input,
+    textarea {
+      width: 730px;
+      margin-right: 0;
+      margin-left: auto;
+    }
   }
 `;
 
@@ -51,8 +67,7 @@ function BottomComponent() {
   return (
     <BottomComponentStyle>
       <div className="title">
-        <h2>Connect</h2>
-        <h2>with us</h2>
+        <h2>Connect with us</h2>
       </div>
       <FormStyle>
         <input type="text" name="Name" id="Name" placeholder="Name" />

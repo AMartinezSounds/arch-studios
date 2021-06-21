@@ -4,22 +4,44 @@ import { graphql } from 'gatsby';
 import BottomComponent from '../components/contact-components/BottomComponent';
 import MiddleComponent from '../components/contact-components/MiddleComponent';
 import TopComponent from '../components/contact-components/TopComponent';
+
 import Map from '../components/contact-components/Map';
 
+const TitleAside = styled.div`
+  position: absolute;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 12.7%;
+
+  height: 325px;
+  p {
+    text-orientation: upright;
+    writing-mode: vertical-lr;
+    letter-spacing: 0.5rem;
+    color: #c8ccd8;
+  }
+  @media (max-width: 767px) {
+    display: none;
+  }
+`;
 const Line = styled.div`
-  margin-left: 1.5rem;
-  height: 1px;
-  width: 100px;
   background-color: #c8ccd8;
-  margin-top: 0.1rem;
+  width: 1px;
+  height: 104px;
 `;
 
 function contact({ data }) {
   const mapImages = data.mapImage;
   return (
     <>
+      <TitleAside>
+        <Line />
+        <p>CONTACT</p>
+      </TitleAside>
       <TopComponent />
-      <Line />
       <MiddleComponent />
       <Map
         bgPhone={mapImages.imagePhone.asset.fluid.src}

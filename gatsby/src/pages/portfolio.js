@@ -36,7 +36,6 @@ const Line = styled.div`
 
 function portfolio({ data }) {
   const projects = data.projects.nodes;
-  console.log(data);
   return (
     <>
       <TitleStyle>

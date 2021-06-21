@@ -13,15 +13,6 @@ export default {
       title: 'Position',
       type: 'string',
     },
-    //     {
-    //       name: 'slug',
-    //       title: 'Slug',
-    //       type: 'slug',
-    //       options: {
-    //         source: 'name',
-    //         maxLength: 100,
-    //       },
-    //     },
     {
       name: 'image',
       title: 'Image',
@@ -29,6 +20,11 @@ export default {
       options: {
         hotspot: true,
       },
+    },
+    {
+      name: 'order',
+      title: 'Order',
+      type: 'number',
     },
   ],
 };

@@ -1,10 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import TopComponent from '../components/index-components/TopComponent';
+
 function index() {
   return (
     <>
-      <p>index</p>
+      <TopComponent />
     </>
   );
 }
