@@ -6,7 +6,7 @@ const TopComponentDesktopStyle = styled.div``;
 function TopComponentDesktop() {
   return (
     <TopComponentDesktopStyle>
-      <p>topComponentDesktop</p>
+      {/* <p>topComponentDesktop</p> */}
     </TopComponentDesktopStyle>
   );
 }

@@ -6,7 +6,7 @@ const TopComponentTabletStyle = styled.div``;
 function TopComponentTablet() {
   return (
     <TopComponentTabletStyle>
-      <p>topComponentTablet</p>
+      {/* <p>topComponentTablet</p> */}
     </TopComponentTabletStyle>
   );
 }

@@ -5,10 +5,11 @@ import TopComponentPhone from './TopComponentPhone';
 import TopComponentTablet from './TopComponentTablet';
 import TopComponentDesktop from './TopComponentDesktop';
 
-function TopComponent() {
+function TopComponent({ topComponentProjects }) {
+  const paramourProject = topComponentProjects[0];
   return (
     <>
-      <TopComponentPhone />
+      <TopComponentPhone paramourProject={paramourProject} />
       <TopComponentTablet />
       <TopComponentDesktop />
     </>
