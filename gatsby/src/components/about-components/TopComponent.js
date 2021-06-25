@@ -9,9 +9,9 @@ const TopComponentStyle = styled.div``;
 
 function TopComponent({ imagesAboutPage }) {
   const images = imagesAboutPage;
-  const imageTopPhone = images[1].imagePhone.asset.fluid.src;
-  const imageTopTablet = images[1].imageTablet.asset.fluid.src;
-  const imageTopDesktop = images[1].imageDesktop.asset.fluid.src;
+  const imageTopPhone = images[2].imagePhone.asset.fluid.src;
+  const imageTopTablet = images[2].imageTablet.asset.fluid.src;
+  const imageTopDesktop = images[2].imageDesktop.asset.fluid.src;
   const title1 = 'Your team of professionals';
   const description1 = `Our small team of world-class professionals will work with you every
   step of the way. Strong relationships are at the core of everything we

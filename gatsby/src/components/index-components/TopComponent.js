@@ -6,12 +6,13 @@ import TopComponentTablet from './TopComponentTablet';
 import TopComponentDesktop from './TopComponentDesktop';
 
 function TopComponent({ topComponentProjects }) {
-  const paramourProject = topComponentProjects[0];
+  const paramourProject = topComponentProjects[3];
+  const allProjects = topComponentProjects;
   return (
     <>
       <TopComponentPhone paramourProject={paramourProject} />
-      <TopComponentTablet />
-      <TopComponentDesktop />
+      <TopComponentTablet paramourProject={paramourProject} />
+      <TopComponentDesktop allProjects={allProjects} />
     </>
   );
 }

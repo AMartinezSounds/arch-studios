@@ -27,7 +27,7 @@ const TopComponentPhoneStyle = styled.div`
     top: 50px;
   }
   .descriptionProject {
-    line-height: 1.4rem;
+    line-height: 1.7rem;
     color: white;
     position: absolute;
     left: 30px;
@@ -52,11 +52,28 @@ const TopComponentPhoneStyle = styled.div`
       background-color: #60636d;
     }
   }
+  @media (min-width: 500px) {
+    margin-inline: auto;
+    width: 311px;
+    .titleProject {
+      font-size: 2.5rem;
+      top: 40px;
+    }
+    .descriptionProject {
+      top: 200px;
+      width: 250px;
+    }
+    .link {
+      width: 200px;
+    }
+  }
+  @media (min-width: 768px) {
+    display: none;
+  }
 `;
 
 function TopComponentPhone({ paramourProject }) {
   const bgPhone = paramourProject.imagePhone.asset.fluid.src;
-  console.log(paramourProject);
   return (
     <TopComponentPhoneStyle bgPhone={bgPhone}>
       <h2 className="titleProject">{paramourProject.name}</h2>

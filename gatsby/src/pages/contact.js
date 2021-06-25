@@ -34,7 +34,8 @@ const Line = styled.div`
 `;
 
 function contact({ data }) {
-  const mapImages = data.mapImage;
+  const mapImage = data.mapImage.nodes[4];
+  console.log(mapImage.imagePhone.asset.fluid.src);
   return (
     <>
       <TitleAside>
@@ -44,9 +45,9 @@ function contact({ data }) {
       <TopComponent />
       <MiddleComponent />
       <Map
-        bgPhone={mapImages.imagePhone.asset.fluid.src}
-        bgTablet={mapImages.imageTablet.asset.fluid.src}
-        bgDesktop={mapImages.imageDesktop.asset.fluid.src}
+        bgPhone={mapImage.imagePhone.asset.fluid.src}
+        bgTablet={mapImage.imageTablet.asset.fluid.src}
+        bgDesktop={mapImage.imageDesktop.asset.fluid.src}
       />
       <BottomComponent />
     </>
@@ -55,26 +56,28 @@ function contact({ data }) {
 
 export const mapQuery = graphql`
   query mapImagesQuery {
-    mapImage: sanityImages {
-      id
-      imageDesktop {
-        asset {
-          fluid(maxWidth: 1110) {
-            ...GatsbySanityImageFluid
+    mapImage: allSanityImages {
+      nodes {
+        name
+        imageDesktop {
+          asset {
+            fluid(maxWidth: 1110) {
+              ...GatsbySanityImageFluid
+            }
           }
         }
-      }
-      imagePhone {
-        asset {
-          fluid(maxWidth: 572) {
-            ...GatsbySanityImageFluid
+        imagePhone {
+          asset {
+            fluid(maxWidth: 572) {
+              ...GatsbySanityImageFluid
+            }
           }
         }
-      }
-      imageTablet {
-        asset {
-          fluid(maxWidth: 375) {
-            ...GatsbySanityImageFluid
+        imageTablet {
+          asset {
+            fluid(maxWidth: 375) {
+              ...GatsbySanityImageFluid
+            }
           }
         }
       }

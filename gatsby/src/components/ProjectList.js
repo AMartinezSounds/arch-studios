@@ -60,7 +60,6 @@ const ProjectListStyle = styled.div`
 `;
 
 function SingleProject({ project }) {
-  console.log(project.imageDesktop.asset.fluid.src);
   return (
     <SingleProjectStyle
       bgPhone={project.imagePhone.asset.fluid.src}

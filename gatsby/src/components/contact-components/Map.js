@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 
 const ImgContainerStyle = styled.div`
-  background-color: red;
   margin-inline: auto;
   background-image: ${(props) => `url("${props.bgPhone}")`};
   background-repeat: no-repeat;

@@ -15,7 +15,7 @@ const TitleAside = styled.div`
   justify-content: space-between;
   min-width: 12.7%;
 
-  height: 325px;
+  height: 365px;
   p {
     text-orientation: upright;
     writing-mode: vertical-lr;
@@ -44,6 +44,7 @@ const Components = styled.div`
 function about({ data }) {
   const professionals = data.professionals.nodes;
   const imagesAboutPage = data.imagesAboutPage.nodes;
+  console.log(imagesAboutPage);
   return (
     <>
       <TitleAside>
