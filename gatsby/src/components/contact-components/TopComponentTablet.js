@@ -7,6 +7,7 @@ const TopComponentTabletStyle = styled.div`
     display: none;
   }
   margin-inline: auto;
+  margin-bottom: 10rem;
   background-image: url(${imageTablet});
   background-repeat: no-repeat;
   height: 720px;
@@ -55,7 +56,7 @@ const TopComponentTabletStyle = styled.div`
       color: #7d828f;
     }
   }
-  @media (min-width: 1440px) {
+  @media (min-width: 1300px) {
     display: none;
   }
 `;

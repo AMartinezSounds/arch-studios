@@ -26,7 +26,7 @@ const SecondComponentTabletStyle = styled.div`
     line-height: 1.4rem;
     color: #7d828f;
   }
-  @media (min-width: 1439px) {
+  @media (min-width: 1299px) {
     display: none;
   }
 `;

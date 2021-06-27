@@ -3,12 +3,25 @@ import { Link } from 'gatsby';
 import styled from 'styled-components';
 import { HiArrowRight } from 'react-icons/hi';
 
+import Fade from 'react-reveal/Fade';
+
 const ThirdComponentPhoneStyle = styled.div`
+  margin-inline: auto;
   background-image: ${(props) => `url("${props.bgPhone}")`};
   background-repeat: no-repeat;
   height: 560px;
-  width: 375px;
+  width: 100%;
+  max-width: 375px;
   position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
   h2 {
     position: absolute;
     color: white;
@@ -40,26 +53,22 @@ const ThirdComponentPhoneStyle = styled.div`
       background-color: #60636d;
     }
   }
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-  }
   @media (min-width: 500px) {
     margin-inline: auto;
     width: 311px;
   }
   @media (min-width: 768px) {
     background-image: ${(props) => `url("${props.bgTablet}")`};
-    width: 573px;
+    min-width: 573px;
+    margin-bottom: 2rem;
   }
-  @media (min-width: 1440px) {
+  @media (min-width: 1300px) {
     background-image: ${(props) => `url("${props.bgDesktop}")`};
-    width: 1110px;
+    background-size: cover;
+    width: 77.08%;
+    min-width: 1110px;
+    max-width: 2500px;
+    margin-bottom: 10rem;
     h2 {
       position: absolute;
       color: white;
@@ -84,7 +93,8 @@ const ThirdComponentPhoneStyle = styled.div`
 
 function ThirdComponentPhone({ bgPhone, bgTablet, bgDesktop }) {
   return (
-    <ThirdComponentPhoneStyle
+    <Fade fraction="0.1">
+        <ThirdComponentPhoneStyle
       bgPhone={bgPhone}
       bgTablet={bgTablet}
       bgDesktop={bgDesktop}
@@ -98,6 +108,7 @@ function ThirdComponentPhone({ bgPhone, bgTablet, bgDesktop }) {
         </Link>
       </div>
     </ThirdComponentPhoneStyle>
+    </Fade>
   );
 }
 

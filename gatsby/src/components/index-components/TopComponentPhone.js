@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import { HiArrowRight } from 'react-icons/hi';
 
 const TopComponentPhoneStyle = styled.div`
+  margin-inline: auto;
   height: 560px;
   width: 100%;
   max-width: 375px;

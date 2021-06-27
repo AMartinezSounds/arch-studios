@@ -8,6 +8,7 @@ const BottomComponentPhoneStyle = styled.div`
   height: 1896px;
   max-width: 311px;
   margin-inline: auto;
+  margin-bottom: 3rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;

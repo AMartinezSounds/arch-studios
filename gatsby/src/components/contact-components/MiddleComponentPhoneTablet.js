@@ -6,6 +6,7 @@ const MiddleComponentPhoneTabletStyle = styled.div`
   height: 630px;
   width: 82.94%;
   margin-inline: auto;
+  margin-bottom: 3rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -14,7 +15,7 @@ const MiddleComponentPhoneTabletStyle = styled.div`
     margin-inline: auto;
     width: 100%;
     height: 26.03%;
-    font-size: 2.3rem;
+    font-size: 2rem;
     display: flex;
     &::before {
       content: '';
@@ -46,13 +47,11 @@ const MiddleComponentPhoneTabletStyle = styled.div`
   }
   @media (min-width: 500px) {
     align-items: center;
-    .title {
-      width: fit-content;
-    }
   }
   @media (min-width: 768px) {
+    margin-bottom: 10rem;
     align-items: stretch;
-    width: 58.07%;
+    width: 77.07%;
     max-width: 573px;
     height: 531px;
     .main-office,
@@ -66,7 +65,7 @@ const MiddleComponentPhoneTabletStyle = styled.div`
       }
     }
   }
-  @media (min-width: 1440px) {
+  @media (min-width: 1299px) {
     display: none;
   }
 `;

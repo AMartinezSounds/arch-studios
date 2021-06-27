@@ -1,6 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 import { graphql } from 'gatsby';
+import SEO from '../components/SEO';
+
+import Fade from 'react-reveal/Fade';
 
 import BottomComponent from '../components/about-components/BottomComponent';
 import MiddleComponent from '../components/about-components/MiddleComponent';
@@ -47,9 +50,12 @@ function about({ data }) {
   console.log(imagesAboutPage);
   return (
     <>
+      <SEO title={'About Us'}/>
       <TitleAside>
+        <Fade top>
         <Line />
         <p>ABOUT US</p>
+        </Fade>
       </TitleAside>
       <Components>
         <TopComponent imagesAboutPage={imagesAboutPage} />

@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-
+import Fade from 'react-reveal/Fade'
 const SingleProjectStyle = styled.div`
   margin-bottom: 30px;
   color: white;
@@ -52,7 +52,7 @@ const SingleProjectStyle = styled.div`
 const ProjectListStyle = styled.div`
   @media (min-width: 1340px) {
     margin-inline: auto;
-    width: 80%;
+    width: 77.07%;
     display: flex;
     flex-wrap: wrap;
     column-gap: 11px;
@@ -61,7 +61,8 @@ const ProjectListStyle = styled.div`
 
 function SingleProject({ project }) {
   return (
-    <SingleProjectStyle
+    <Fade fraction="0.1">
+      <SingleProjectStyle
       bgPhone={project.imagePhone.asset.fluid.src}
       bgTablet={project.imageTablet.asset.fluid.src}
       bgDesktop={project.imageDesktop.asset.fluid.src}
@@ -69,6 +70,7 @@ function SingleProject({ project }) {
       <h2>{project.name}</h2>
       <p>{project.date}</p>
     </SingleProjectStyle>
+    </Fade>
   );
 }
 

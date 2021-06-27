@@ -1,6 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 import { graphql } from 'gatsby';
+import SEO from '../components/SEO';
+
+import Fade from 'react-reveal/Fade';
 import ProjectList from '../components/ProjectList';
 
 const ProjectListStyle = styled.div`
@@ -38,9 +41,12 @@ function portfolio({ data }) {
   const projects = data.projects.nodes;
   return (
     <>
+      <SEO title={'Portfolio'}/>
       <TitleStyle>
-        <Line />
-        <p>PORTFOLIO</p>
+        <Fade top>
+          <Line />
+          <p>PORTFOLIO</p>
+        </Fade>
       </TitleStyle>
       <ProjectListStyle>
         <ProjectList projects={projects} />

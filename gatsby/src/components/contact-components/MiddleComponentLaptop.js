@@ -2,11 +2,13 @@ import React from 'react';
 import styled from 'styled-components';
 import { HiArrowRight } from 'react-icons/hi';
 
+import Fade from 'react-reveal/Fade';
+
 const MiddleComponentStyle = styled.div`
   @media (max-width: 1439px) {
     display: none;
   }
-  @media (min-width: 1440px) {
+  @media (min-width: 1300px) {
     margin-inline: auto;
     width: 1110px;
     height: 500px;
@@ -48,6 +50,7 @@ const MiddleComponentStyle = styled.div`
 function MiddleComponent() {
   return (
     <MiddleComponentStyle>
+      <Fade fraction="0.1">
       <div className="title">
         <h2>Contact Details</h2>
       </div>
@@ -89,6 +92,7 @@ function MiddleComponent() {
           </a>
         </div>
       </div>
+      </Fade>
     </MiddleComponentStyle>
   );
 }

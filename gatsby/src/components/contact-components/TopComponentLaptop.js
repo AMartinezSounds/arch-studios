@@ -3,13 +3,17 @@ import styled from 'styled-components';
 // import imageTablet from '../../../public/contact/tablet/image-hero.jpg';
 import imageLaptop from '../../../public/contact/desktop/image-hero.jpg';
 
+import Fade from 'react-reveal/Fade';
+
 const TopComponentLaptopStyle = styled.div`
   display: none;
-  @media (min-width: 1440px) {
+  @media (min-width: 1300px) {
     display: block;
     height: 720px;
-    width: 1110px;
+    width: 77.07%;
+    max-width: 1110px;
     margin-inline: auto;
+    margin-bottom: 8rem;
     .collage {
       height: 100%;
       position: relative;
@@ -83,17 +87,23 @@ function TopComponentLaptop({ title, description }) {
   return (
     <TopComponentLaptopStyle>
       <div className="collage">
+      <Fade delay={500} left>
         <h1 className="title-of-page">Contact</h1>
-        <div className="image-container">
+      </Fade>
+      <Fade>
+      <div className="image-container">
           <img src={imageLaptop} alt="telefon" />
         </div>
-        <div className="text-container">
+      </Fade>
+      <Fade delay={750} right>
+      <div className="text-container">
           <div className="text">
             <Line />
             <h2>{title}</h2>
             <p>{description}</p>
           </div>
         </div>
+      </Fade>
       </div>
     </TopComponentLaptopStyle>
   );

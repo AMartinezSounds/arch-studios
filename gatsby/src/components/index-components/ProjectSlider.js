@@ -13,7 +13,8 @@ const ProjectStyle = styled.div`
   background-image: ${(props) => `url("${props.bg}")`};
   background-repeat: no-repeat;
   background-size: cover;
-  height: 720px;
+  min-height: 720px;
+  max-height: 75vh;
   position: relative;
   &::before {
     content: '';

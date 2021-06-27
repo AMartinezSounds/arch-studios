@@ -2,21 +2,28 @@ import React from 'react';
 import styled from 'styled-components';
 import ProjectSlider from './ProjectSlider';
 
+import Zoom from 'react-reveal/Zoom';
+
 const TopComponentDesktopStyle = styled.div`
-  @media (max-width: 1439px) {
+  @media (max-width: 1299px) {
     display: none;
   }
-  height: 720px;
-  width: 1110px;
+  min-height: 720px;
+  width: 77.08%;
+  min-width: 1110px;
+  max-width: 2500px;
   margin-inline: auto;
+  margin-bottom: 10rem;
 `;
 
 function TopComponentDesktop({ allProjects }) {
   return (
     <>
-      <TopComponentDesktopStyle>
-        <ProjectSlider allProjects={allProjects} />
-      </TopComponentDesktopStyle>
+      <Zoom>
+        <TopComponentDesktopStyle>
+          <ProjectSlider allProjects={allProjects} />
+        </TopComponentDesktopStyle>
+      </Zoom>
     </>
   );
 }

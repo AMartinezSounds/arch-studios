@@ -7,6 +7,7 @@ const TopComponentTabletStyle = styled.div`
     display: none;
   }
   margin-inline: auto;
+  margin-bottom: 8rem;
   background-image: ${(props) => `url("${props.imageTopTablet}")`};
   background-repeat: no-repeat;
   background-size: cover;
@@ -58,7 +59,7 @@ const TopComponentTabletStyle = styled.div`
       color: #7d828f;
     }
   }
-  @media (min-width: 1440px) {
+  @media (min-width: 1300px) {
     display: none;
   }
 `;

@@ -1,10 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
 import { graphql } from 'gatsby';
+import SEO from '../components/SEO';
+
+import Fade from 'react-reveal/Fade'
+
 import BottomComponent from '../components/contact-components/BottomComponent';
 import MiddleComponent from '../components/contact-components/MiddleComponent';
 import TopComponent from '../components/contact-components/TopComponent';
-
+import BottomComponent2 from '../components/contact-components/BottomComponent2';
 import Map from '../components/contact-components/Map';
 
 const TitleAside = styled.div`
@@ -38,9 +42,12 @@ function contact({ data }) {
   console.log(mapImage.imagePhone.asset.fluid.src);
   return (
     <>
+      <SEO title={'Contact'}/>
       <TitleAside>
+        <Fade top>
         <Line />
         <p>CONTACT</p>
+        </Fade>
       </TitleAside>
       <TopComponent />
       <MiddleComponent />
@@ -49,7 +56,8 @@ function contact({ data }) {
         bgTablet={mapImage.imageTablet.asset.fluid.src}
         bgDesktop={mapImage.imageDesktop.asset.fluid.src}
       />
-      <BottomComponent />
+      {/* <BottomComponent /> */}
+      <BottomComponent2 />
     </>
   );
 }

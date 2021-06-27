@@ -18,6 +18,7 @@ export default {
     description: 'State to the art design for today buildings',
   },
   plugins: [
+    'gatsby-plugin-react-helmet',
     'gatsby-plugin-styled-components',
     {
       resolve: 'gatsby-source-sanity',

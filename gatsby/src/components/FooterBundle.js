@@ -7,7 +7,7 @@ const FooterBundleStyle = styled.footer`
   height: 443px;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: repeat(7, 1fr);
   img {
     position: absolute;
     top: 25px;

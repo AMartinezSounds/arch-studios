@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { Link } from 'gatsby';
 import { HiArrowRight } from 'react-icons/hi';
 
+
 const BottomComponentTabletStyle = styled.div`
   @media (max-width: 767px) {
     display: none;
@@ -11,6 +12,7 @@ const BottomComponentTabletStyle = styled.div`
   width: 74.61%;
   max-width: 573px;
   margin-inline: auto;
+  margin-bottom: 3rem;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -32,7 +34,7 @@ const BottomComponentTabletStyle = styled.div`
     height: 72px;
     background-color: black;
   }
-  @media (min-width: 1439px) {
+  @media (min-width: 1299px) {
     display: none;
   }
 `;

@@ -4,30 +4,37 @@ import Img from 'gatsby-image';
 // import imageTablet from '../../../public/contact/tablet/image-hero.jpg';
 import imageLaptop from '../../../public/contact/desktop/image-hero.jpg';
 
+import Fade from 'react-reveal/Fade';
+
 const TopComponentLaptopStyle = styled.div`
   display: none;
-  @media (min-width: 1440px) {
+  @media (min-width: 1300px) {
     display: block;
-    height: 720px;
-    width: 1110px;
+    min-height: 720px;
+    min-width: 1110px;
+    width: 77.07%;
+    max-width: 2500px;
     margin-inline: auto;
+    margin-bottom: 10rem;
     .collage {
       height: 100%;
       position: relative;
       .image-container {
         position: relative;
         img {
-          width: 635px;
+          width: 57.2%;
+          min-width: 635px;
           height: 720px;
+          object-fit: cover;
         }
-        &::after {
+        &::before {
           content: '';
           position: absolute;
           top: 0;
           left: 0px;
-          width: 635px;
+          width: 57.2%;
           height: 720px;
-          background-color: rgba(0, 0, 0, 0.7);
+          background-color: rgba(0, 0, 0, 0.5);
         }
       }
       .text-container {
@@ -84,10 +91,15 @@ function TopComponentLaptop({ title1, description1, imageTopDesktop }) {
   return (
     <TopComponentLaptopStyle imageTopDesktop={imageTopDesktop}>
       <div className="collage">
-        <h1 className="title-of-page">About</h1>
+        <Fade delay={500} left>
+          <h1 className="title-of-page">About</h1>
+        </Fade>
+        <Fade>
         <div className="image-container">
           <img src={imageTopDesktop} alt="telefon" />
         </div>
+        </Fade>
+        <Fade delay={750} right>
         <div className="text-container">
           <div className="text">
             <Line />
@@ -95,6 +107,7 @@ function TopComponentLaptop({ title1, description1, imageTopDesktop }) {
             <p>{description1}</p>
           </div>
         </div>
+        </Fade>
       </div>
     </TopComponentLaptopStyle>
   );

@@ -8,6 +8,7 @@ const TopComponentTabletStyle = styled.div`
     display: none;
   }
   margin-inline: auto;
+  margin-bottom: 4rem;
   height: 720px;
   width: 573px;
   background-image: ${(props) => `url("${props.bgTablet}")`};
@@ -56,7 +57,7 @@ const TopComponentTabletStyle = styled.div`
       background-color: #60636d;
     }
   }
-  @media (min-width: 1440px) {
+  @media (min-width: 1300px) {
     display: none;
   }
 `;
@@ -67,7 +68,7 @@ function TopComponentTablet({ paramourProject }) {
     <TopComponentTabletStyle bgTablet={bgTablet}>
       <h2 className="titleProject">{paramourProject.name}</h2>
       <p className="descriptionProject">{paramourProject.description}</p>
-      <Link className="link" to="/about">
+      <Link className="link" to="/portfolio">
         See Our Portfolio
         <HiArrowRight style={{ fontSize: '1.5rem', marginLeft: '.5rem' }} />
       </Link>

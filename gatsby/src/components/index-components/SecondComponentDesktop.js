@@ -2,14 +2,18 @@ import React from 'react';
 import styled from 'styled-components';
 import Img from 'gatsby-image';
 
+import Fade from 'react-reveal/Fade';
+
+
 const SecondComponentDesktopStyle = styled.div`
-  @media (max-width: 1439px) {
+  @media (max-width: 1299px) {
     display: none;
   }
   height: 600px;
   width: 77.08%;
-  max-width: 1110px;
+  min-width: 1110px;
   margin-inline: auto;
+  margin-bottom: 10rem;
   position: relative;
   display: flex;
   justify-content: flex-end;
@@ -49,7 +53,8 @@ const ImageContainer = styled.div`
 function SecondComponentDesktop({ welcomeImage }) {
   const image = welcomeImage;
   return (
-    <SecondComponentDesktopStyle>
+    <Fade fraction="0.1">
+      <SecondComponentDesktopStyle>
       <h1 className="big-title">Welcome</h1>
       <div className="text-container">
         <h2 className="title-of-page">Welcome to Arch Studio</h2>
@@ -75,6 +80,7 @@ function SecondComponentDesktop({ welcomeImage }) {
         <Img fluid={image} />
       </ImageContainer>
     </SecondComponentDesktopStyle>
+    </Fade>
   );
 }
 

@@ -9,6 +9,7 @@ const MiddleComponentTabletStyle = styled.div`
   width: 74.74%;
   max-width: 574px;
   margin-inline: auto;
+  margin-bottom: 6rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -35,7 +36,7 @@ const MiddleComponentTabletStyle = styled.div`
     color: #7d828f;
   }
 
-  @media (min-width: 1439px) {
+  @media (min-width: 1300px) {
     display: none;
   }
 `;

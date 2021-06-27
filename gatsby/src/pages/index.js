@@ -1,6 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 import { graphql } from 'gatsby';
+import SEO from '../components/SEO';
+
+import Fade from 'react-reveal/Fade';
 
 import TopComponent from '../components/index-components/TopComponent';
 import SecondComponent from '../components/index-components/SecondComponent';
@@ -44,9 +47,12 @@ function index({ data }) {
   const welcomeImage = data.images.nodes[1].imageDesktop.asset.fluid;
   return (
     <>
+      <SEO title={'Home'}/>
       <TitleAside>
+        <Fade top>
         <Line />
         <p>HOME</p>
+        </Fade>
       </TitleAside>
       <TopComponent topComponentProjects={topComponentProjects} />
       <SecondComponent welcomeImage={welcomeImage} />

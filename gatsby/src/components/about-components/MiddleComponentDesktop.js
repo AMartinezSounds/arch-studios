@@ -2,10 +2,15 @@ import React from 'react';
 import styled from 'styled-components';
 import Img from 'gatsby-image';
 
+import Fade from 'react-reveal/Fade';
+
 const MiddleComponentDesktopStyle = styled.div`
+  @media (max-width: 1299px) {
+    display: none;
+  }
   width: 77.08%;
-  height: 568px;
   margin-inline: auto;
+  margin-bottom: 10rem;
   display: flex;
   justify-content: space-between;
   position: relative;
@@ -17,9 +22,6 @@ const MiddleComponentDesktopStyle = styled.div`
     width: 65px;
     height: 1px;
     background-color: #c8ccd8;
-  }
-  @media (max-width: 1439px) {
-    display: none;
   }
 `;
 const TextComposition = styled.div`
@@ -36,13 +38,14 @@ const TextComposition = styled.div`
   }
 `;
 const ImageContainer = styled.div`
-  width: 540px;
+  min-width: 540px;
 `;
 
 function MiddleComponentDesktop({ title, p1, p2, p3, imagesAboutPage }) {
   const image = imagesAboutPage[0].imageDesktop.asset.fluid;
   console.log(image);
   return (
+    <Fade fraction="0.1">
     <MiddleComponentDesktopStyle>
       <TextComposition>
         <div className="title">
@@ -58,6 +61,7 @@ function MiddleComponentDesktop({ title, p1, p2, p3, imagesAboutPage }) {
         <Img fluid={image} />
       </ImageContainer>
     </MiddleComponentDesktopStyle>
+    </Fade>
   );
 }
 

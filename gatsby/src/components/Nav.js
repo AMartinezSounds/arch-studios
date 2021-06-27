@@ -28,7 +28,7 @@ const NavStyles = styled.nav`
       display: inline;
     }
   }
-  @media (min-width: 1340px) {
+  @media (min-width: 1300px) {
     justify-content: flex-start;
     width: 80%;
     max-width: 1120px;
@@ -43,8 +43,8 @@ const NavStyles = styled.nav`
     }
   }
 `;
-const LogoStyles = styled.div``;
-const IconStyles = styled.div`
+const Logo = styled.div``;
+const Icon = styled.div`
   cursor: pointer;
   font-size: 2rem;
   display: flex;
@@ -58,11 +58,11 @@ const IconStyles = styled.div`
 function Nav({ crossButton, setCrossButton }) {
   return (
     <NavStyles>
-      <LogoStyles>
+      <Logo>
         <Link to="/" className="logo">
           <img src={logo} alt="logo" />
         </Link>
-      </LogoStyles>
+      </Logo>
       <ul>
         <li>
           <Link to="/portfolio">Portfolio</Link>
@@ -73,7 +73,7 @@ function Nav({ crossButton, setCrossButton }) {
         <li>
           <Link to="/contact">Contact</Link>
         </li>
-        <IconStyles
+        <Icon
           onClick={() =>
             crossButton === 'false'
               ? setCrossButton('true')
@@ -81,7 +81,7 @@ function Nav({ crossButton, setCrossButton }) {
           }
         >
           {crossButton === 'false' ? <GiHamburgerMenu /> : <FaTimes />}
-        </IconStyles>
+        </Icon>
       </ul>
     </NavStyles>
   );

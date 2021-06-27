@@ -3,14 +3,17 @@ import styled from 'styled-components';
 import { Link } from 'gatsby';
 import { HiArrowRight } from 'react-icons/hi';
 
+import Fade from 'react-reveal/Fade';
+
 const BottomComponentDesktopStyle = styled.div`
-  @media (max-width: 1439px) {
+  @media (max-width: 1299px) {
     display: none;
   }
-  width: 77.15%;
-  max-width: 1110px;
+  width: 77.08%;
+  min-width: 1110px;
   height: 650px;
   margin-inline: auto;
+  margin-bottom: 10rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -46,8 +49,10 @@ const BottomComponentDesktopStyle = styled.div`
 `;
 const SingleProjectStyle = styled.div`
   background-image: ${(props) => `url("${props.bgDesktop}")`};
+  background-size: cover;
   background-repeat: no-repeat;
-  width: 350px;
+  width: 30%;
+  min-width: 350px;
   position: relative;
   &::before {
     content: '';
@@ -75,8 +80,8 @@ const SingleProjectStyle = styled.div`
     position: absolute;
     font-size: 240px;
     top: -280px;
-    left: 220px;
-    width: fit-content;
+    left: 50%;
+
     opacity: 0.5;
   }
 `;
@@ -93,7 +98,8 @@ function SingleProject({ project }) {
 
 function BottomComponentDesktop({ projects }) {
   return (
-    <BottomComponentDesktopStyle>
+    <Fade fraction="0.1">
+        <BottomComponentDesktopStyle>
       <div className="title-section-container">
         <h2 className="title-section">Featured</h2>
         <Link className="linkPortfolioButton" to="/portfolio">
@@ -107,6 +113,7 @@ function BottomComponentDesktop({ projects }) {
         ))}
       </div>
     </BottomComponentDesktopStyle>
+    </Fade>
   );
 }
 

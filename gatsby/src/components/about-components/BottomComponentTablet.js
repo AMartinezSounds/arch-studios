@@ -11,6 +11,7 @@ const BottomComponentPhoneStyle = styled.div`
   height: 1000px;
   max-width: 574px;
   margin-inline: auto;
+  margin-bottom: 6rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -19,7 +20,7 @@ const BottomComponentPhoneStyle = styled.div`
     width: 55%;
     font-size: 2.4rem;
   }
-  @media (min-width: 1439px) {
+  @media (min-width: 1300px) {
     display: none;
   }
 `;

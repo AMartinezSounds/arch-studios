@@ -3,16 +3,23 @@ import styled from 'styled-components';
 import Img from 'gatsby-image';
 import { IoLogoTwitter, IoLogoLinkedin } from 'react-icons/io';
 
+import Fade from 'react-reveal/Fade';
+
 const BottomComponentDesktopStyle = styled.div`
-  @media (max-width: 1439px) {
+  @media (max-width: 1299px) {
     display: none;
   }
   height: 860px;
   width: 77.08%;
   margin-inline: auto;
-  margin-bottom: 90px;
+  margin-bottom: 10rem;
   display: flex;
   justify-content: space-between;
+  .info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
   .title {
     justify-self: flex-start;
     font-size: 2.6rem;
@@ -22,6 +29,13 @@ const BottomComponentDesktopStyle = styled.div`
       margin-top: 0;
     }
   }
+  .social {
+    cursor: pointer;
+  }
+  @media (min-width: 2000px) {
+    display: flex;
+    flex-direction: column;
+  }
 `;
 const ProfessionalsStyle = styled.div`
   display: flex;
@@ -29,6 +43,11 @@ const ProfessionalsStyle = styled.div`
   flex-wrap: wrap;
   width: 730px;
   height: 100%;
+  @media (min-width: 2000px) {
+    flex-wrap: nowrap;
+    min-width: 1100px;
+    width: 100%;
+  }
 `;
 
 const SingleProfessionalStyle = styled.div`
@@ -42,12 +61,17 @@ function SingleProfessional({ professional }) {
     <SingleProfessionalStyle>
       <Img fluid={picture} />
       <div className="info">
-        <h3>{professional.name}</h3>
-        <p>{professional.position}</p>
-        {/* <div className="socials-container">
-          <IoLogoLinkedin style={{ fontSize: '2.3rem', marginLeft: '-4px' }} />
-          <IoLogoTwitter style={{ fontSize: '2.3rem' }} />
-        </div> */}
+        <div className="text">
+          <h3>{professional.name}</h3>
+          <p>{professional.position}</p>
+        </div>
+        <div className="socials-container">
+          <IoLogoLinkedin
+            className="social"
+            style={{ fontSize: '2.3rem', marginLeft: '-4px' }}
+          />
+          <IoLogoTwitter className="social" style={{ fontSize: '2.3rem' }} />
+        </div>
       </div>
     </SingleProfessionalStyle>
   );
@@ -55,6 +79,7 @@ function SingleProfessional({ professional }) {
 
 function BottomComponentDesktop({ professionals }) {
   return (
+    <Fade fraction="0.1">
     <BottomComponentDesktopStyle>
       <div className="title">
         <h2>The Leaders</h2>
@@ -68,6 +93,7 @@ function BottomComponentDesktop({ professionals }) {
         ))}
       </ProfessionalsStyle>
     </BottomComponentDesktopStyle>
+    </Fade>
   );
 }
 
