@@ -16,11 +16,13 @@ const BottomComponentStyle = styled.div`
   width: 82.94%;
   min-width: 311px;
   max-width: 572px;
-  margin-inline: auto;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 3rem;
   .title {
     margin-top: 0;
-    margin-inline: auto;
+    margin-left: auto;
+    margin-right: auto;
     font-size: 3rem;
     width: 92%;
   }
@@ -116,7 +118,7 @@ function BottomComponent2() {
       }}
     >
       {(formik) => (
-        <Fade fraction>
+        <Fade fraction="0.3">
           <BottomComponentStyle>
           <h2 className="title">Connect with us</h2>
           <FormStyle>

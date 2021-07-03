@@ -11,7 +11,7 @@ const MobileNavStyles = styled.nav`
   left: 1.95rem;
   right: 0;
   background-color: #eeeff4;
-  z-index: 3;
+  z-index: 4;
   ul {
     height: 100%;
     display: flex;

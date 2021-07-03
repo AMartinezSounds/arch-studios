@@ -56,7 +56,6 @@ function contact({ data }) {
         bgTablet={mapImage.imageTablet.asset.fluid.src}
         bgDesktop={mapImage.imageDesktop.asset.fluid.src}
       />
-      {/* <BottomComponent /> */}
       <BottomComponent2 />
     </>
   );

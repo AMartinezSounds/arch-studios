@@ -9,7 +9,8 @@ const MiddleComponentDesktopStyle = styled.div`
     display: none;
   }
   width: 77.08%;
-  margin-inline: auto;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 10rem;
   display: flex;
   justify-content: space-between;

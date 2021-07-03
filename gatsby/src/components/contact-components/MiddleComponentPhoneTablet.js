@@ -1,18 +1,20 @@
 import React from 'react';
 import styled from 'styled-components';
 import { HiArrowRight } from 'react-icons/hi';
-
+import Fade from 'react-reveal/Fade';
 const MiddleComponentPhoneTabletStyle = styled.div`
   height: 630px;
   width: 82.94%;
-  margin-inline: auto;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 3rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   .title {
     position: relative;
-    margin-inline: auto;
+    margin-left: auto;
+    margin-right: auto;
     width: 100%;
     height: 26.03%;
     font-size: 2rem;
@@ -72,7 +74,8 @@ const MiddleComponentPhoneTabletStyle = styled.div`
 
 function MiddleComponentPhoneTablet() {
   return (
-    <MiddleComponentPhoneTabletStyle>
+    <Fade fraction="0.3">
+      <MiddleComponentPhoneTabletStyle>
       <div className="title">
         <h2>Contact Details</h2>
       </div>
@@ -117,6 +120,7 @@ function MiddleComponentPhoneTablet() {
         </div>
       </div>
     </MiddleComponentPhoneTabletStyle>
+    </Fade>
   );
 }
 

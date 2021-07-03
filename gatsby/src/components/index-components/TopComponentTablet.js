@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'gatsby';
+import Fade from 'react-reveal/Fade';
 import styled from 'styled-components';
 import { HiArrowRight } from 'react-icons/hi';
 
@@ -7,7 +8,8 @@ const TopComponentTabletStyle = styled.div`
   @media (max-width: 767px) {
     display: none;
   }
-  margin-inline: auto;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 4rem;
   height: 720px;
   width: 573px;
@@ -65,7 +67,8 @@ const TopComponentTabletStyle = styled.div`
 function TopComponentTablet({ paramourProject }) {
   const bgTablet = paramourProject.imageTablet.asset.fluid.src;
   return (
-    <TopComponentTabletStyle bgTablet={bgTablet}>
+    <Fade>
+      <TopComponentTabletStyle bgTablet={bgTablet}>
       <h2 className="titleProject">{paramourProject.name}</h2>
       <p className="descriptionProject">{paramourProject.description}</p>
       <Link className="link" to="/portfolio">
@@ -73,6 +76,7 @@ function TopComponentTablet({ paramourProject }) {
         <HiArrowRight style={{ fontSize: '1.5rem', marginLeft: '.5rem' }} />
       </Link>
     </TopComponentTabletStyle>
+    </Fade>
   );
 }
 

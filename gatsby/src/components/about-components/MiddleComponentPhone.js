@@ -1,11 +1,15 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import Fade from 'react-reveal/Fade';
+
 const MiddleComponentPhoneStyle = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin-inline: auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 6rem;
   width: 82.94%;
   max-width: 375px;
   height: 618px;
@@ -34,7 +38,8 @@ const MiddleComponentPhoneStyle = styled.div`
     h2 {
       width: 79.41%;
       max-width: 311px;
-      margin-inline: auto;
+      margin-left: auto;
+      margin-right: auto;
     }
     .paragraphs {
       height: 75%;
@@ -44,7 +49,8 @@ const MiddleComponentPhoneStyle = styled.div`
     .p3 {
       width: 79%;
       max-width: 311px;
-      margin-inline: auto;
+      margin-left: auto;
+      margin-right: auto;
     }
   }
   @media (min-width: 767px) {
@@ -54,7 +60,8 @@ const MiddleComponentPhoneStyle = styled.div`
 
 function MiddleComponentPhone({ title, p1, p2, p3 }) {
   return (
-    <MiddleComponentPhoneStyle>
+    <Fade fraction="0.3">
+      <MiddleComponentPhoneStyle>
       <div className="title">
         <h2>{title}</h2>
       </div>
@@ -64,6 +71,7 @@ function MiddleComponentPhone({ title, p1, p2, p3 }) {
         <p className="p3">{p3}</p>
       </div>
     </MiddleComponentPhoneStyle>
+    </Fade>
   );
 }
 

@@ -37,6 +37,19 @@ const Line = styled.div`
   height: 104px;
 `;
 
+function compare(a, b){
+  const orderA = a.project.order;
+  const orderB = b.project.order;
+  let comparison = 0;
+  if(orderA > orderB){
+    comparison = 1;
+  } else if (orderA < orderB){
+    comparison = -1;
+  }
+  return comparison;
+}
+
+
 function portfolio({ data }) {
   const projects = data.projects.nodes;
   return (

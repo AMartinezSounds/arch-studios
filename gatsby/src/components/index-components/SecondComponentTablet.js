@@ -1,11 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
-
+import Fade from 'react-reveal/Fade';
 const SecondComponentTabletStyle = styled.div`
   @media (max-width: 767px) {
     display: none;
   }
-  margin-inline: auto;
+  margin-left: auto;
+  margin-right: auto;
   width: 572px;
   height: 600px;
   display: flex;
@@ -33,7 +34,8 @@ const SecondComponentTabletStyle = styled.div`
 
 function SecondComponentTablet() {
   return (
-    <SecondComponentTabletStyle>
+    <Fade fraction="0.3">
+      <SecondComponentTabletStyle>
       <h1 className="big-title">Welcome</h1>
       <h2 className="title-of-page">Welcome to Arch Studio</h2>
       <div className="text-container">
@@ -56,6 +58,7 @@ function SecondComponentTablet() {
         </p>
       </div>
     </SecondComponentTabletStyle>
+    </Fade>
   );
 }
 

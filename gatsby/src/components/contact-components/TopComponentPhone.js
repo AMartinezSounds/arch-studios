@@ -2,6 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import imagePhone from '../../../public/contact/mobile/image-hero.jpg';
 
+import Fade from 'react-reveal/Fade';
+
 const TopComponentPhoneStyles = styled.div`
   height: 630px;
   @media (min-width: 768px) {
@@ -26,12 +28,14 @@ const ImageComposition = styled.div`
   }
   @media (min-width: 500px) {
     width: 70%;
-    margin-inline: auto;
+    margin-left: auto;
+    margin-right: auto;
   }
 `;
 
 const TextComposition = styled.div`
-  margin-inline: auto;
+  margin-left: auto;
+  margin-right: auto;
   width: 311px;
   h2 {
     font-size: 2.6rem;
@@ -45,6 +49,7 @@ const TextComposition = styled.div`
 function TopComponentPhone({ title, description }) {
   return (
     <>
+      <Fade>
       <TopComponentPhoneStyles>
         <ImageComposition>
           <div className="white-space" />
@@ -54,6 +59,7 @@ function TopComponentPhone({ title, description }) {
           <p>{description}</p>
         </TextComposition>
       </TopComponentPhoneStyles>
+      </Fade>
     </>
   );
 }

@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Img from 'gatsby-image';
+import Fade from 'react-reveal/Fade';
 import { IoLogoTwitter, IoLogoLinkedin } from 'react-icons/io';
 
 const BottomComponentPhoneStyle = styled.div`
@@ -10,7 +11,8 @@ const BottomComponentPhoneStyle = styled.div`
   width: 74.74%;
   height: 1000px;
   max-width: 574px;
-  margin-inline: auto;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 6rem;
   display: flex;
   flex-direction: column;
@@ -68,7 +70,8 @@ function SingleProfessional({ professional }) {
 
 function BottomComponentPhone({ professionals }) {
   return (
-    <BottomComponentPhoneStyle>
+    <Fade fraction="0.3">
+      <BottomComponentPhoneStyle>
       <div className="title">
         <h2>The Leaders</h2>
       </div>
@@ -81,6 +84,7 @@ function BottomComponentPhone({ professionals }) {
         ))}
       </ProfessionalsStyle>
     </BottomComponentPhoneStyle>
+    </Fade>
   );
 }
 

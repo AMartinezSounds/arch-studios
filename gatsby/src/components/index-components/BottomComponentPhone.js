@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import Fade from 'react-reveal/Fade';
 import { Link } from 'gatsby';
 import { HiArrowRight } from 'react-icons/hi';
 
@@ -7,7 +8,8 @@ const BottomComponentPhoneStyle = styled.div`
   height: 960px;
   width: 82.94%;
   max-width: 311px;
-  margin-inline: auto;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 3rem;
   display: flex;
   flex-direction: column;
@@ -70,7 +72,8 @@ function SingleProject({ project }) {
 
 function BottomComponentPhone({ projects }) {
   return (
-    <BottomComponentPhoneStyle>
+    <Fade fraction="0.3">
+      <BottomComponentPhoneStyle>
       <h2 className="title-section">Featured</h2>
       {projects.map((project) => (
         <SingleProject key={project.id} project={project} />
@@ -80,6 +83,7 @@ function BottomComponentPhone({ projects }) {
         <HiArrowRight style={{ fontSize: '1.5rem', marginLeft: '.5rem' }} />
       </Link>
     </BottomComponentPhoneStyle>
+    </Fade>
   );
 }
 

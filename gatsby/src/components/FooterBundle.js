@@ -21,7 +21,8 @@ const FooterBundleStyle = styled.footer`
     height: 120px;
   }
   @media (min-width: 1340px) {
-    margin-inline: auto;
+    margin-left: auto;
+    margin-right: auto;
     width: 80%;
     display: flex;
     height: 120px;
@@ -29,7 +30,8 @@ const FooterBundleStyle = styled.footer`
 `;
 
 const ImageContainer = styled.div`
-  margin-inline: auto;
+  margin-left: auto;
+  margin-right: auto;
   position: relative;
   width: 120px;
   height: 120px;

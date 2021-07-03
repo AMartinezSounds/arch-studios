@@ -4,7 +4,8 @@ import styled from 'styled-components';
 import Fade from 'react-reveal/Fade';
 
 const ImgContainerStyle = styled.div`
-  margin-inline: auto;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 3rem;
   background-image: ${(props) => `url("${props.bgPhone}")`};
   background-repeat: no-repeat;

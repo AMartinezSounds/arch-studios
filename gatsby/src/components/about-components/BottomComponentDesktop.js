@@ -11,7 +11,8 @@ const BottomComponentDesktopStyle = styled.div`
   }
   height: 860px;
   width: 77.08%;
-  margin-inline: auto;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 10rem;
   display: flex;
   justify-content: space-between;

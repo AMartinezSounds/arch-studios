@@ -1,8 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
-
+import Fade from 'react-reveal/Fade';
 const SecondComponentPhoneStyle = styled.div`
-  margin-inline: auto;
+  margin-left: auto;
+  margin-right: auto;
   height: 643px;
   width: 82.94%;
   max-width: 311px;
@@ -33,7 +34,8 @@ const SecondComponentPhoneStyle = styled.div`
 
 function SecondComponentPhone() {
   return (
-    <SecondComponentPhoneStyle>
+    <Fade fraction="0.3">
+      <SecondComponentPhoneStyle>
       <h2 className="title">Welcome to Arch Studio</h2>
       <p className="text p1">
         We have a unique network and skillset to help bring your projects to
@@ -52,6 +54,7 @@ function SecondComponentPhone() {
         to create truly stunning projects that will stand the test of time.
       </p>
     </SecondComponentPhoneStyle>
+    </Fade>
   );
 }
 

@@ -1,12 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
+import Fade from 'react-reveal/Fade';
 import imageTablet from '../../../public/contact/tablet/image-hero.jpg';
 
 const TopComponentTabletStyle = styled.div`
   @media (max-width: 767px) {
     display: none;
   }
-  margin-inline: auto;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 8rem;
   background-image: ${(props) => `url("${props.imageTopTablet}")`};
   background-repeat: no-repeat;
@@ -50,11 +52,13 @@ const TopComponentTabletStyle = styled.div`
     h2 {
       font-size: 3.4rem;
       width: 79.41%;
-      margin-inline: auto;
+      margin-left: auto;
+      margin-right: auto;
     }
     p {
       width: 79.41%;
-      margin-inline: auto;
+      margin-left: auto;
+      margin-right: auto;
       line-height: 1.7rem;
       color: #7d828f;
     }
@@ -74,7 +78,8 @@ const Line = styled.div`
 
 function TopComponentTablet({ title1, description1, imageTopTablet }) {
   return (
-    <TopComponentTabletStyle imageTopTablet={imageTopTablet}>
+    <Fade>
+      <TopComponentTabletStyle imageTopTablet={imageTopTablet}>
       <h1 className="title-of-page">About</h1>
       <div className="text">
         <Line />
@@ -82,6 +87,7 @@ function TopComponentTablet({ title1, description1, imageTopTablet }) {
         <p>{description1}</p>
       </div>
     </TopComponentTabletStyle>
+    </Fade>
   );
 }
 

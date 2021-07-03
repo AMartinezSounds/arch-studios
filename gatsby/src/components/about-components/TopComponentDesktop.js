@@ -14,7 +14,8 @@ const TopComponentLaptopStyle = styled.div`
     min-width: 1110px;
     width: 77.07%;
     max-width: 2500px;
-    margin-inline: auto;
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 10rem;
     .collage {
       height: 100%;

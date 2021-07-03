@@ -7,7 +7,8 @@ const BottomComponentPhoneStyle = styled.div`
   display: none;
   height: 1896px;
   max-width: 311px;
-  margin-inline: auto;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 3rem;
   display: flex;
   flex-direction: column;
@@ -33,7 +34,8 @@ const BottomComponentPhoneStyle = styled.div`
 const ProfessionalsStyle = styled.div`
   width: 311px;
   height: 1736px;
-  margin-inline: auto;
+  margin-left: 0;
+  margin-right: 0;
   display: flex;
   flex-direction: column;
   justify-content: space-between;

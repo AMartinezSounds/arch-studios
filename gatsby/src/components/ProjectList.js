@@ -11,7 +11,8 @@ const SingleProjectStyle = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  margin-inline: auto;
+  margin-left: auto;
+  margin-right: auto;
   position: relative;
   p,
   h2 {
@@ -51,7 +52,8 @@ const SingleProjectStyle = styled.div`
 
 const ProjectListStyle = styled.div`
   @media (min-width: 1340px) {
-    margin-inline: auto;
+    margin-left: auto;
+    margin-right: auto;
     width: 77.07%;
     display: flex;
     flex-wrap: wrap;
@@ -60,9 +62,10 @@ const ProjectListStyle = styled.div`
 `;
 
 function SingleProject({ project }) {
+
   return (
     <Fade fraction="0.1">
-      <SingleProjectStyle
+      <SingleProjectStyle key={project.order}
       bgPhone={project.imagePhone.asset.fluid.src}
       bgTablet={project.imageTablet.asset.fluid.src}
       bgDesktop={project.imageDesktop.asset.fluid.src}
@@ -77,9 +80,8 @@ function SingleProject({ project }) {
 function ProjectList({ projects }) {
   return (
     <ProjectListStyle>
-      {projects.map((project) => (
-        <SingleProject key={project.id} project={project} />
-      ))}
+      {projects.map((project) => 
+      <SingleProject key={project.id} project={project} />)}
     </ProjectListStyle>
   );
 }

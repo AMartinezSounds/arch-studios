@@ -11,7 +11,8 @@ const NavStyles = styled.nav`
   align-items: center;
   width: 82.4%;
   height: 14vh;
-  margin-inline: auto;
+  margin-left: auto;
+  margin-right: auto;
   li {
     display: none;
   }

@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import Fade from 'react-reveal/Fade';
 import { Link } from 'gatsby';
 import { HiArrowRight } from 'react-icons/hi';
 
@@ -11,7 +12,8 @@ const BottomComponentTabletStyle = styled.div`
   height: 925px;
   width: 74.61%;
   max-width: 573px;
-  margin-inline: auto;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 3rem;
   display: flex;
   flex-direction: column;
@@ -89,7 +91,8 @@ function SingleProject({ project }) {
 
 function BottomComponentTablet({ projects }) {
   return (
-    <BottomComponentTabletStyle>
+    <Fade fraction="0.3">
+      <BottomComponentTabletStyle>
       <div className="title-section-container">
         <h2 className="title-section">Featured</h2>
         <Link className="linkPortfolioButton" to="/portfolio">
@@ -101,6 +104,7 @@ function BottomComponentTablet({ projects }) {
         <SingleProject key={project.id} project={project} />
       ))}
     </BottomComponentTabletStyle>
+    </Fade>
   );
 }
 

@@ -12,7 +12,8 @@ const BottomComponentDesktopStyle = styled.div`
   width: 77.08%;
   min-width: 1110px;
   height: 650px;
-  margin-inline: auto;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 10rem;
   display: flex;
   flex-direction: column;

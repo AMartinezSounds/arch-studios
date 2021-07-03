@@ -12,7 +12,8 @@ const SecondComponentDesktopStyle = styled.div`
   height: 600px;
   width: 77.08%;
   min-width: 1110px;
-  margin-inline: auto;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 10rem;
   position: relative;
   display: flex;

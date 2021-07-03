@@ -9,7 +9,8 @@ const MiddleComponentStyle = styled.div`
     display: none;
   }
   @media (min-width: 1300px) {
-    margin-inline: auto;
+    margin-left: auto;
+    margin-right: auto;
     width: 1110px;
     height: 500px;
     display: flex;

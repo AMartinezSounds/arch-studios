@@ -1,10 +1,12 @@
 import React from 'react';
 import { Link } from 'gatsby';
+import Fade from 'react-reveal/Fade';
 import styled from 'styled-components';
 import { HiArrowRight } from 'react-icons/hi';
 
 const TopComponentPhoneStyle = styled.div`
-  margin-inline: auto;
+  margin-left: auto;
+  margin-right: auto;
   height: 560px;
   width: 100%;
   max-width: 375px;
@@ -76,7 +78,8 @@ const TopComponentPhoneStyle = styled.div`
 function TopComponentPhone({ paramourProject }) {
   const bgPhone = paramourProject.imagePhone.asset.fluid.src;
   return (
-    <TopComponentPhoneStyle bgPhone={bgPhone}>
+    <Fade>
+      <TopComponentPhoneStyle bgPhone={bgPhone}>
       <h2 className="titleProject">{paramourProject.name}</h2>
       <p className="descriptionProject">{paramourProject.description}</p>
       <Link className="link" to="/about">
@@ -84,6 +87,7 @@ function TopComponentPhone({ paramourProject }) {
         <HiArrowRight style={{ fontSize: '1.5rem', marginLeft: '.5rem' }} />
       </Link>
     </TopComponentPhoneStyle>
+    </Fade>
   );
 }
 

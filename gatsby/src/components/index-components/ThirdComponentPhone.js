@@ -1,12 +1,14 @@
 import React from 'react';
 import { Link } from 'gatsby';
+import Fade from 'react-reveal/Fade';
 import styled from 'styled-components';
 import { HiArrowRight } from 'react-icons/hi';
 
-import Fade from 'react-reveal/Fade';
+
 
 const ThirdComponentPhoneStyle = styled.div`
-  margin-inline: auto;
+  margin-left: auto;
+  margin-right: auto;
   background-image: ${(props) => `url("${props.bgPhone}")`};
   background-repeat: no-repeat;
   height: 560px;
@@ -54,7 +56,6 @@ const ThirdComponentPhoneStyle = styled.div`
     }
   }
   @media (min-width: 500px) {
-    margin-inline: auto;
     width: 311px;
   }
   @media (min-width: 768px) {

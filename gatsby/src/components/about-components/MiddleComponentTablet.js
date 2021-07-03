@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import Fade from 'react-reveal/Fade';
 
 const MiddleComponentTabletStyle = styled.div`
   @media (max-width: 767px) {
@@ -8,7 +9,8 @@ const MiddleComponentTabletStyle = styled.div`
   height: 518px;
   width: 74.74%;
   max-width: 574px;
-  margin-inline: auto;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 6rem;
   display: flex;
   flex-direction: column;
@@ -43,7 +45,8 @@ const MiddleComponentTabletStyle = styled.div`
 
 function MiddleComponentTablet({ title, p1, p2, p3 }) {
   return (
-    <MiddleComponentTabletStyle>
+    <Fade fraction="0.3">
+      <MiddleComponentTabletStyle>
       <div className="title">
         <h2>{title}</h2>
       </div>
@@ -53,6 +56,7 @@ function MiddleComponentTablet({ title, p1, p2, p3 }) {
         <p className="p3">{p3}</p>
       </div>
     </MiddleComponentTabletStyle>
+    </Fade>
   );
 }
 
