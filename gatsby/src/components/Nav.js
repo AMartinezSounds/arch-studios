@@ -3,7 +3,7 @@ import { Link } from 'gatsby';
 import styled from 'styled-components';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { FaTimes } from 'react-icons/fa';
-import logo from '../../static/logo.svg';
+import logo from '../assets/images/logo.svg';
 
 const NavStyles = styled.nav`
   display: flex;

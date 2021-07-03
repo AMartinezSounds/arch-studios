@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Footer from './Footer';
-import logo from '../../static/logo.svg';
+import logo from '../assets/images/logo.svg';
 
 const FooterBundleStyle = styled.footer`
   height: 443px;

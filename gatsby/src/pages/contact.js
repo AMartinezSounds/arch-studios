@@ -5,7 +5,6 @@ import SEO from '../components/SEO';
 
 import Fade from 'react-reveal/Fade'
 
-import BottomComponent from '../components/contact-components/BottomComponent';
 import MiddleComponent from '../components/contact-components/MiddleComponent';
 import TopComponent from '../components/contact-components/TopComponent';
 import BottomComponent2 from '../components/contact-components/BottomComponent2';
@@ -19,7 +18,6 @@ const TitleAside = styled.div`
   align-items: center;
   justify-content: space-between;
   min-width: 12.7%;
-
   height: 325px;
   p {
     text-orientation: upright;

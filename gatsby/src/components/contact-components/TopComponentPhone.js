@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import imagePhone from '../../../public/contact/mobile/image-hero.jpg';
+import imagePhone from '../../assets/images/contact/mobile/image-hero.jpg';
 
 import Fade from 'react-reveal/Fade';
 
