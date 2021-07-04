@@ -83,7 +83,7 @@ function ProjectSlider({ allProjects }) {
         <div className="text">
           <h2>{project1.name}</h2>
           <p>{project1.description}</p>
-          <Link className="link" to="/about">
+          <Link className="link" to="/portfolio">
             See Our Portfolio
             <HiArrowRight style={{ fontSize: '1.5rem', marginLeft: '.5rem' }} />
           </Link>
@@ -93,7 +93,7 @@ function ProjectSlider({ allProjects }) {
         <div className="text">
           <h2>{project2.name}</h2>
           <p>{project2.description}</p>
-          <Link className="link" to="/about">
+          <Link className="link" to="/portfolio">
             See Our Portfolio
             <HiArrowRight style={{ fontSize: '1.5rem', marginLeft: '.5rem' }} />
           </Link>
@@ -103,7 +103,7 @@ function ProjectSlider({ allProjects }) {
         <div className="text">
           <h2>{project3.name}</h2>
           <p>{project3.description}</p>
-          <Link className="link" to="/about">
+          <Link className="link" to="/portfolio">
             See Our Portfolio
             <HiArrowRight style={{ fontSize: '1.5rem', marginLeft: '.5rem' }} />
           </Link>
@@ -113,7 +113,7 @@ function ProjectSlider({ allProjects }) {
         <div className="text">
           <h2>{project4.name}</h2>
           <p>{project4.description}</p>
-          <Link className="link" to="/about">
+          <Link className="link" to="/portfolio">
             See Our Portfolio
             <HiArrowRight style={{ fontSize: '1.5rem', marginLeft: '.5rem' }} />
           </Link>
