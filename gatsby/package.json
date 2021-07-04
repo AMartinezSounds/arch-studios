@@ -1,5 +1,5 @@
 {
-  "name": "Arch-Studio-frontend",
+  "name": "arch-studio-frontend",
   "private": true,
   "description": "Speciliazing in Urban Design",
   "version": "0.1.0",
@@ -34,7 +34,7 @@
     "gatsby-source-sanity": "^6.0.4",
     "isomorphic-fetch": "^2.2.1",
     "netlify-cli": "^2.62.0",
-    "netlify-lambda": "^2.0.1",
+    "netlify-lambda": "^2.0.10",
     "normalize.css": "^8.0.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
@@ -64,6 +64,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/wesbos/slicks-slices"
+    "url": "https://github.com/AMartinezSounds/arch-studios"
   }
 }
