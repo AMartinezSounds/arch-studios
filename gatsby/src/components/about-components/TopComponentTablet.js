@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Fade from 'react-reveal/Fade';
-import imageTablet from '../../../public/contact/tablet/image-hero.jpg';
+import imageTablet from '../../assets/images/contact/tablet/image-hero.jpg';
 
 const TopComponentTabletStyle = styled.div`
   @media (max-width: 767px) {

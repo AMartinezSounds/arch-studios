@@ -1,8 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Img from 'gatsby-image';
-// import imageTablet from '../../../public/contact/tablet/image-hero.jpg';
-import imageLaptop from '../../../public/contact/desktop/image-hero.jpg';
+import imageLaptop from '../../assets/images/contact/desktop/image-hero.jpg';
 
 import Fade from 'react-reveal/Fade';
 

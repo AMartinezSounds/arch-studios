@@ -8,15 +8,6 @@ export default {
       title: 'Project Name',
       type: 'string',
     },
-    //     {
-    //       name: 'slug',
-    //       title: 'Slug',
-    //       type: 'slug',
-    //       options: {
-    //         source: 'name',
-    //         maxLength: 100,
-    //       },
-    //     },
     {
       name: 'imageDesktop',
       title: 'Image Desktop',
@@ -50,6 +41,13 @@ export default {
       name: 'order',
       title: 'Order',
       type: 'number',
+    },
+  ],
+  orderings: [
+    {
+      title: 'Order',
+      name: 'order',
+      by: [{ field: 'order', direction: 'asc' }],
     },
   ],
   preview: {

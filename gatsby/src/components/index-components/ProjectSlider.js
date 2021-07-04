@@ -64,7 +64,6 @@ const ProjectStyle = styled.div`
 `;
 
 function ProjectSlider({ allProjects }) {
-  console.log(allProjects);
   const project1 = allProjects[3];
   const project2 = allProjects[0];
   const project3 = allProjects[2];

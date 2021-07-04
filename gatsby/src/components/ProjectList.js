@@ -62,7 +62,6 @@ const ProjectListStyle = styled.div`
 `;
 
 function SingleProject({ project }) {
-
   return (
     <Fade fraction="0.1">
       <SingleProjectStyle key={project.order}
@@ -77,11 +76,11 @@ function SingleProject({ project }) {
   );
 }
 
-function ProjectList({ projects }) {
+function ProjectList({ projects}) {
   return (
     <ProjectListStyle>
       {projects.map((project) => 
-      <SingleProject key={project.id} project={project} />)}
+      <SingleProject key={project.order} project={project} />)}
     </ProjectListStyle>
   );
 }

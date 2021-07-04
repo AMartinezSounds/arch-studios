@@ -52,6 +52,7 @@ function compare(a, b){
 
 function portfolio({ data }) {
   const projects = data.projects.nodes;
+  console.log(projects)
   return (
     <>
       <SEO title={'Portfolio'}/>
@@ -62,7 +63,7 @@ function portfolio({ data }) {
         </Fade>
       </TitleStyle>
       <ProjectListStyle>
-        <ProjectList projects={projects} />
+        <ProjectList projects={projects}/>
       </ProjectListStyle>
     </>
   );
@@ -70,7 +71,7 @@ function portfolio({ data }) {
 
 export const query = graphql`
   query ProjectQuery {
-    projects: allSanityProjects {
+    projects: allSanityProjects(sort: {order: ASC, fields: order}) {
       nodes {
         name
         date
