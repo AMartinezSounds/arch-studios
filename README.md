@@ -49,19 +49,22 @@ Users should be able to:
 - CSS Grid
 - Mobile-first workflow
 - [React](https://reactjs.org/) - JS library
-- [Sass](https://sass-lang.com) - For styles
-- [Font Awesome](https://fontawesome.com) - For icons
-- [Firebase](https://firebase.google.com) - Deployment
+- [Gatsby](https://www.gatsbyjs.com) - React framework
+- [Sanity](https://www.sanity.io) - CMS
+- [Graphql](https://graphql.org) - Query language
+- [Styled Components](https://styled-components.com/) - For styles
+- [react-reveal](https://www.react-reveal.com) - For animation
+- [Formik](https://formik.org) - For formulary
+- [Netlify](https://app.netlify.com/teams/alfre-canos13/overview) - Deployment
 
 
 ### What I learned
 
-Super interesting project that help me to understand all the basics about React working with hooks. 
-I also learnt about the importance of state management libraries like Redux. Because I managed all the state by passing down props from the top component, and when you have so many props, this method becomes a nightmare.  
+I learnt to pull out data from a CMS (Sanity) with a query language (Graphql) to display it in the frontend (Gatsby)
 
 ### Continued development
 
-I would like to refactor the code to use a state management library.
+I would like to clean the code to improve its performance.
 
 ### Useful resources
 
