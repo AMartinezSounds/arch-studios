@@ -37,7 +37,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: https://alfredo-martinez-paypi.netlify.app
+- Live Site URL: https://alfredo-martinez-arch-studios.netlify.app/
 
 ## My process
 
